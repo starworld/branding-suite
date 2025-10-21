@@ -168,7 +168,7 @@ export async function createOrUpdateSubscription(data: InsertSubscription): Prom
 }
 
 // Generated Report helpers
-export async function createGeneratedReport(data: InsertGeneratedReport): Promise<GeneratedReport> {
+export async function createGeneratedReport(data: Omit<InsertGeneratedReport, 'id' | 'shareToken'>): Promise<GeneratedReport> {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
 
@@ -197,6 +197,14 @@ export async function getReportByShareToken(token: string): Promise<GeneratedRep
   return result.length > 0 ? result[0] : undefined;
 }
 
+export async function getReportByBrandPositioningId(brandPositioningId: string): Promise<GeneratedReport | undefined> {
+  const db = await getDb();
+  if (!db) return undefined;
+
+  const result = await db.select().from(generatedReports).where(eq(generatedReports.brandPositioningId, brandPositioningId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
 export async function updateGeneratedReport(id: string, data: Partial<GeneratedReport>): Promise<void> {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
@@ -204,13 +212,16 @@ export async function updateGeneratedReport(id: string, data: Partial<GeneratedR
   await db.update(generatedReports).set(data).where(eq(generatedReports.id, id));
 }
 
-// AI Generation tracking helpers
-export async function trackAiGeneration(data: InsertAiGeneration): Promise<void> {
+// AI Generation tracking
+export async function trackAiGeneration(data: Omit<InsertAiGeneration, 'id'>): Promise<AiGeneration> {
   const db = await getDb();
-  if (!db) return;
+  if (!db) throw new Error("Database not available");
 
   const id = `aig_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   await db.insert(aiGenerations).values({ ...data, id });
+  
+  const result = await db.select().from(aiGenerations).where(eq(aiGenerations.id, id)).limit(1);
+  return result[0];
 }
 
 export async function getAiGenerations(brandPositioningId: string): Promise<AiGeneration[]> {

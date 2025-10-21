@@ -4,6 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
+import * as aiGenerator from "./ai/generator";
 
 export const appRouter = router({
   system: systemRouter,
@@ -76,6 +77,42 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         await db.deleteBrandPositioning(input.id);
         return { success: true };
+      }),
+
+    generate: protectedProcedure
+      .input(z.object({ id: z.string() }))
+      .mutation(async ({ input }) => {
+        const bp = await db.getBrandPositioning(input.id);
+        if (!bp) throw new Error("Brand positioning not found");
+
+        const context = {
+          brandPositioningId: bp.id,
+          brandName: bp.brandName ?? "",
+          brandingType: bp.brandingType ?? "",
+          inspiration: bp.inspirationData ?? undefined,
+          icp: bp.icpData ?? undefined,
+          competitors: bp.competitorsData ?? undefined,
+          brandValues: bp.brandValuesData ?? undefined,
+          selectedArchetype: bp.selectedArchetype ?? undefined,
+          language: bp.language ?? "ja",
+        };
+
+        const report = await aiGenerator.generateCompleteReport(context);
+        return { reportId: report.id };
+      }),
+  }),
+
+  report: router({
+    get: protectedProcedure
+      .input(z.object({ id: z.string() }))
+      .query(async ({ input }) => {
+        return await db.getGeneratedReport(input.id);
+      }),
+
+    getByBrandPositioning: protectedProcedure
+      .input(z.object({ brandPositioningId: z.string() }))
+      .query(async ({ input }) => {
+        return await db.getReportByBrandPositioningId(input.brandPositioningId);
       }),
   }),
 });
