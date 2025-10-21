@@ -104,7 +104,7 @@ export async function getUser(id: string) {
 }
 
 // Brand Positioning helpers
-export async function createBrandPositioning(data: InsertBrandPositioning): Promise<BrandPositioning> {
+export async function createBrandPositioning(data: Omit<InsertBrandPositioning, 'id'>): Promise<BrandPositioning> {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
 
