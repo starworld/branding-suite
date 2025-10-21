@@ -1,203 +1,318 @@
 {
   "common": {
     "appName": "Branding Suite",
-    "login": "Login",
-    "logout": "Logout",
-    "save": "Save",
-    "cancel": "Cancel",
-    "delete": "Delete",
-    "edit": "Edit",
-    "create": "Create",
-    "back": "Back",
-    "next": "Next",
-    "previous": "Previous",
-    "loading": "Loading...",
-    "error": "An error occurred",
-    "success": "Success"
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "create": "作成",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "success": "成功しました"
   },
   "nav": {
-    "home": "Home",
-    "dashboard": "Dashboard",
-    "pricing": "Pricing",
-    "support": "Support"
+    "home": "ホーム",
+    "dashboard": "ダッシュボード",
+    "pricing": "料金プラン",
+    "support": "サポート"
+  },
+  "landing": {
+    "hero": {
+      "badge": "AIパワードブランド戦略ツール",
+      "title": "AIでブランド&マーケティング戦略を構築",
+      "subtitle": "ポジショニングを見つけ、マーケティング戦略を取得し、収益を増やす。AIパワードのブランドポジショニング&戦略ツールキット。数分でインサイトを取得。",
+      "cta": {
+        "primary": "無料で始める",
+        "secondary": "サンプルを見る"
+      },
+      "features": {
+        "fast": "数分で完成",
+        "ai": "AI生成",
+        "growth": "成長を加速"
+      }
+    },
+    "howItWorks": {
+      "title": "使い方",
+      "subtitle": "シンプル、高速、明確な知識",
+      "step": "ステップ"
+    },
+    "steps": {
+      "step1": {
+        "title": "詳細を入力",
+        "description": "会社の基本情報を入力して開始します。"
+      },
+      "step2": {
+        "title": "インスピレーションを収集",
+        "description": "ブランドのインスピレーション源を探索・定義します。"
+      },
+      "step3": {
+        "title": "理想的な顧客プロファイルを定義",
+        "description": "理想的な顧客プロファイルを特定・記述します。"
+      },
+      "step4": {
+        "title": "競合を分析",
+        "description": "最も重要な競合を入力し、分析します。"
+      },
+      "step5": {
+        "title": "ブランド価値を定義",
+        "description": "ブランドを駆動するコア価値を策定します。"
+      },
+      "step6": {
+        "title": "ブランドアーキタイプを選択",
+        "description": "ブランドのパーソナリティを最もよく表すアーキタイプを選択します。"
+      },
+      "step7": {
+        "title": "戦略を生成",
+        "description": "AIが包括的なブランド戦略を作成します。"
+      },
+      "step8": {
+        "title": "レポートを取得",
+        "description": "包括的なブランドレポートと戦略を取得します。"
+      }
+    },
+    "features": {
+      "title": "包括的なブランド分析",
+      "subtitle": "すべての重要な領域で実装可能な知識を含む、ブランドの完全な360°ビューを取得。ブランドポジショニングからマーケティング戦略まで、成長に必要なすべて。",
+      "brandPositioning": {
+        "title": "ブランドポジショニング",
+        "items": {
+          "identity": {
+            "title": "ブランドアイデンティティ",
+            "description": "ボイス、プロミス、パーソナリティ、ミッション、ビジョン、USP、目標"
+          },
+          "archetype": {
+            "title": "ブランドアーキタイプ",
+            "description": "ブランドのパーソナリティアーキタイプを発見"
+          },
+          "visual": {
+            "title": "ビジュアルアイデンティティ",
+            "description": "色、タイポグラフィ、ビジュアル要素のガイドライン"
+          }
+        }
+      },
+      "analysis": {
+        "title": "現在のブランド",
+        "items": {
+          "swot": {
+            "title": "SWOT分析",
+            "description": "強み、弱み、機会、リスクの評価"
+          },
+          "competitor": {
+            "title": "競合分析",
+            "description": "競合環境の詳細な分析"
+          }
+        }
+      },
+      "marketing": {
+        "title": "マーケティング戦略",
+        "items": {
+          "icp": {
+            "title": "理想的な顧客プロファイル",
+            "description": "ターゲットオーディエンスとペルソナの深い洞察"
+          },
+          "copy": {
+            "title": "マーケティングコピー",
+            "description": "説得力のあるメッセージとコピーライティングのガイドライン"
+          },
+          "content": {
+            "title": "コンテンツ戦略",
+            "description": "コンテンツ作成と配信の戦略的アプローチ"
+          },
+          "campaigns": {
+            "title": "キャンペーンアイデア",
+            "description": "クリエイティブなキャンペーンコンセプトと実装計画"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "ブランドレポートを見る準備はできましたか？",
+      "subtitle": "ライブサンプルを見るか、わずか30分で独自のレポートを作成しましょう",
+      "button": "今すぐ始める"
+    }
   },
   "home": {
     "hero": {
-      "title": "AI-Powered Brand Strategy Generation",
-      "subtitle": "Generate comprehensive brand positioning and marketing strategy in 8 simple steps. Multi-language support for businesses worldwide.",
-      "cta": "Get Started Free",
-      "learnMore": "Learn More"
+      "title": "AIでブランド戦略を自動生成",
+      "subtitle": "8つの簡単なステップで、包括的なブランドポジショニングとマーケティング戦略を生成。多言語対応で、世界中のビジネスに対応します。",
+      "cta": "無料で始める",
+      "learnMore": "詳しく見る"
     },
     "features": {
-      "title": "Key Features",
+      "title": "主な機能",
       "brandPositioning": {
-        "title": "Brand Positioning",
-        "description": "AI analyzes your company's uniqueness and suggests optimal brand positioning"
+        "title": "ブランドポジショニング",
+        "description": "AIが企業の独自性を分析し、最適なブランドポジショニングを提案"
       },
       "competitorAnalysis": {
-        "title": "Competitor Analysis",
-        "description": "Automatically generate SWOT analysis, competitor comparison, and market trends"
+        "title": "競合分析",
+        "description": "SWOT分析、競合比較、市場トレンドを自動生成"
       },
       "multilingual": {
-        "title": "Multilingual Support",
-        "description": "Support for 7 languages including Japanese and English. Expand globally with ease"
+        "title": "多言語対応",
+        "description": "日本語、英語を含む7言語に対応。グローバル展開をサポート"
       }
     }
   },
   "dashboard": {
-    "title": "Brand Positioning",
-    "subtitle": "All your brand positionings. You have {{credits}} credits available to create new brand positioning.",
-    "creditsAvailable": "{{count}} credits available",
-    "createNew": "Create New Brand Positioning",
-    "getBranding": "Get Brand Positioning",
-    "listTitle": "Brand Positioning List",
-    "listCount": "Showing {{count}} brand positionings",
-    "empty": "No brand positionings yet",
-    "createFirst": "Create your first brand positioning",
+    "title": "ブランドポジショニング",
+    "subtitle": "すべてのブランドポジショニングの一覧です。新しいブランドポジショニングを作成するには{{credits}}クレジット利用可能です。",
+    "creditsAvailable": "{{count}}クレジット利用可能",
+    "createNew": "新しいブランドポジショニングを作成",
+    "getBranding": "ブランドポジショニングを取得",
+    "listTitle": "ブランドポジショニング一覧",
+    "listCount": "{{count}}件のブランドポジショニングを表示しています",
+    "empty": "まだブランドポジショニングがありません",
+    "createFirst": "最初のブランドポジショニングを作成",
     "table": {
-      "name": "Name",
-      "description": "Description",
-      "status": "Status",
-      "createdAt": "Created At",
-      "actions": "Actions"
+      "name": "名前",
+      "description": "説明",
+      "status": "ステータス",
+      "createdAt": "作成日",
+      "actions": "アクション"
     },
     "status": {
-      "completed": "Completed",
-      "inProgress": "{{current}}/8 Steps"
+      "completed": "完了",
+      "inProgress": "{{current}}/8 ステップ"
     },
     "actions": {
-      "view": "View",
-      "continue": "Continue",
-      "delete": "Delete"
+      "view": "表示",
+      "continue": "続ける",
+      "delete": "削除"
     }
   },
   "wizard": {
-    "title": "Create Brand Positioning",
-    "backToDashboard": "Back to Dashboard",
-    "progress": "Step {{current}} / {{total}}",
-    "progressPercent": "{{percent}}% Complete",
+    "title": "ブランドポジショニング作成",
+    "backToDashboard": "ダッシュボードに戻る",
+    "progress": "ステップ {{current}} / {{total}}",
+    "progressPercent": "{{percent}}% 完了",
     "step1": {
-      "title": "Basic Information",
-      "description": "Enter basic information about your brand",
-      "projectName": "Project Name",
-      "projectNamePlaceholder": "e.g., New Product Branding",
-      "brandName": "Brand Name",
-      "brandNamePlaceholder": "e.g., TechCorp",
-      "brandingType": "Branding Type",
+      "title": "基本情報の入力",
+      "description": "ブランドの基本情報を入力してください",
+      "projectName": "プロジェクト名",
+      "projectNamePlaceholder": "例: 新製品ブランディング",
+      "brandName": "ブランド名",
+      "brandNamePlaceholder": "例: TechCorp",
+      "brandingType": "ブランディングタイプ",
       "types": {
         "newCompany": {
           "label": "New Company",
-          "description": "Branding for new companies"
+          "description": "新規企業のブランディング"
         },
         "existingCompany": {
           "label": "Existing Company",
-          "description": "Rebranding for existing companies"
+          "description": "既存企業のリブランディング"
         },
         "personalBrand": {
           "label": "Personal Brand",
-          "description": "Building personal brand"
+          "description": "個人ブランドの構築"
         },
         "other": {
           "label": "Other (Custom)",
-          "description": "Other branding types"
+          "description": "その他のブランディング"
         }
       }
     },
     "step2": {
-      "title": "Inspiration",
-      "description": "Tell us about your brand's inspiration",
-      "label": "Inspiration",
-      "placeholder": "Describe your brand's inspiration sources, reference companies or brands, and desired direction..."
+      "title": "インスピレーション",
+      "description": "ブランドのインスピレーション源を教えてください",
+      "label": "インスピレーション",
+      "placeholder": "ブランドのインスピレーション源、参考にしている企業やブランド、目指す方向性などを自由に記述してください..."
     },
     "step3": {
-      "title": "Ideal Customer Profile (ICP)",
-      "description": "Describe your target customer in detail",
-      "label": "Ideal Customer Profile",
-      "placeholder": "Describe target customer details (age, gender, occupation, interests, pain points, buying behavior, etc.)..."
+      "title": "理想的な顧客プロファイル (ICP)",
+      "description": "ターゲットとする顧客像を詳しく教えてください",
+      "label": "理想的な顧客プロファイル",
+      "placeholder": "ターゲット顧客の詳細（年齢、性別、職業、興味関心、課題、購買行動など）を記述してください..."
     },
     "step4": {
-      "title": "Competitor Analysis",
-      "description": "Enter your main competitors",
-      "label": "Competitors",
-      "placeholder": "List main competitors and their characteristics (one per line)..."
+      "title": "競合分析",
+      "description": "主要な競合企業を入力してください",
+      "label": "競合企業",
+      "placeholder": "主要な競合企業名とその特徴を記述してください（1行に1社）..."
     },
     "step5": {
-      "title": "Brand Values",
-      "description": "Define your brand's core values",
-      "label": "Brand Values",
-      "placeholder": "Describe your brand's core values, what you care about, and what you promise..."
+      "title": "ブランド価値",
+      "description": "ブランドの核となる価値観を定義してください",
+      "label": "ブランド価値",
+      "placeholder": "ブランドの核となる価値観、大切にしていること、約束することなどを記述してください..."
     },
     "step6": {
-      "title": "Brand Archetype",
-      "description": "Select the archetype that best represents your brand",
+      "title": "ブランドアーキタイプ",
+      "description": "ブランドを最もよく表すアーキタイプを選択してください",
       "archetypes": {
         "innocent": {
           "label": "The Innocent",
-          "description": "Pure and optimistic, values honesty"
+          "description": "純粋で楽観的、誠実さを重視"
         },
         "sage": {
           "label": "The Sage",
-          "description": "Pursues wisdom and knowledge, values truth"
+          "description": "知恵と知識を追求、真実を重視"
         },
         "explorer": {
           "label": "The Explorer",
-          "description": "Loves adventure and discovery, values freedom"
+          "description": "冒険と発見を愛する、自由を重視"
         },
         "outlaw": {
           "label": "The Outlaw",
-          "description": "Revolutionary and disruptive, values change"
+          "description": "革命的で破壊的、変革を重視"
         },
         "magician": {
           "label": "The Magician",
-          "description": "Transformation and realization, makes dreams reality"
+          "description": "変容と実現、夢を現実に"
         },
         "hero": {
           "label": "The Hero",
-          "description": "Courage and determination, overcomes challenges"
+          "description": "勇気と決意、困難を克服"
         },
         "lover": {
           "label": "The Lover",
-          "description": "Passion and intimacy, values beauty"
+          "description": "情熱と親密さ、美を重視"
         },
         "jester": {
           "label": "The Jester",
-          "description": "Fun and humor, provides joy"
+          "description": "楽しさとユーモア、喜びを提供"
         },
         "everyman": {
           "label": "The Everyman",
-          "description": "Approachable and honest, sense of belonging"
+          "description": "親しみやすさと誠実さ、帰属意識"
         },
         "caregiver": {
           "label": "The Caregiver",
-          "description": "Compassion and protection, serves others"
+          "description": "思いやりと保護、他者への奉仕"
         },
         "ruler": {
           "label": "The Ruler",
-          "description": "Control and order, leadership"
+          "description": "統制と秩序、リーダーシップ"
         },
         "creator": {
           "label": "The Creator",
-          "description": "Creativity and innovation, creates value"
+          "description": "創造性と革新、価値の創出"
         }
       }
     },
     "step7": {
-      "title": "Generating Report",
-      "description": "AI is generating your brand strategy",
-      "generating": "AI is generating your brand strategy...",
-      "wait": "This may take a few minutes. Please wait."
+      "title": "レポート生成",
+      "description": "AIがブランド戦略を生成しています",
+      "generating": "AIがブランド戦略を生成しています...",
+      "wait": "これには数分かかる場合があります。しばらくお待ちください。"
     },
     "step8": {
-      "title": "Complete",
-      "description": "Your brand positioning is complete",
-      "success": "Brand positioning complete!",
-      "message": "View your report and leverage your brand strategy.",
-      "viewReport": "View Report"
+      "title": "完了",
+      "description": "ブランドポジショニングが完成しました",
+      "success": "ブランドポジショニングが完成しました!",
+      "message": "レポートを確認して、ブランド戦略を活用しましょう。",
+      "viewReport": "レポートを表示"
     },
     "buttons": {
-      "previous": "Previous",
-      "next": "Next",
-      "generate": "Start Generation"
+      "previous": "前へ",
+      "next": "次へ",
+      "generate": "生成開始"
     }
   },
   "footer": {
