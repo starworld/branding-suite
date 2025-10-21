@@ -5,6 +5,7 @@ import { trpc } from "@/lib/trpc";
 import { ArrowLeft, Download, Share2 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useParams } from "wouter";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 // Helper function to render JSON content in a readable format
 function renderContent(content: string | null, sectionType: string) {
@@ -637,6 +638,7 @@ export default function ReportView() {
             </div>
             
             <div className="flex gap-2">
+              <LanguageSwitcher />
               <Button variant="outline" size="sm">
                 <Share2 className="mr-2 h-4 w-4" />
                 共有

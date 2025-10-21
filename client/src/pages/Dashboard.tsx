@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Plus, Eye, Trash2, FileText } from "lucide-react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function Dashboard() {
   const { user, loading } = useAuth();
@@ -30,6 +31,7 @@ export default function Dashboard() {
             <h1 className="text-2xl font-bold gradient-text">Branding Suite</h1>
           </div>
           <div className="flex items-center gap-4">
+            <LanguageSwitcher />
             <div className="text-sm text-muted-foreground">
               <span className="font-medium text-foreground">{creditsRemaining}</span> クレジット利用可能
             </div>

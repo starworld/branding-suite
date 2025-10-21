@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function Landing() {
   const { t } = useTranslation();
@@ -130,6 +131,16 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+      {/* Header */}
+      <header className="container py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            {APP_LOGO && <img src={APP_LOGO} alt={APP_TITLE} className="h-8 w-8" />}
+            <span className="text-xl font-bold">{APP_TITLE}</span>
+          </div>
+          <LanguageSwitcher />
+        </div>
+      </header>
       {/* Hero Section */}
       <section className="container py-20 md:py-32">
         <div className="mx-auto max-w-4xl text-center">

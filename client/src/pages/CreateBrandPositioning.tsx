@@ -11,6 +11,7 @@ import { ChevronLeft, ChevronRight, Check, Loader2 } from "lucide-react";
 import { Link, useLocation, useParams } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const BRAND_ARCHETYPES = [
   { value: "innocent", label: "The Innocent", description: "純粋で楽観的、誠実さを重視" },
@@ -208,7 +209,7 @@ export default function CreateBrandPositioning() {
             </Button>
           </Link>
           <h1 className="text-xl font-semibold">ブランドポジショニング作成</h1>
-          <div className="w-32"></div>
+          <LanguageSwitcher />
         </div>
       </header>
 
