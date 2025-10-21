@@ -6,6 +6,7 @@ import { ArrowLeft, Download, Share2 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useParams } from "wouter";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ShareModal } from "@/components/ShareModal";
 import { useState } from "react";
 
 // Helper function to render JSON content in a readable format
@@ -577,6 +578,7 @@ export default function ReportView() {
   const [, setLocation] = useLocation();
   const { user } = useAuth();
   const [isExporting, setIsExporting] = useState(false);
+  const [shareModalOpen, setShareModalOpen] = useState(false);
 
   const { data: report, isLoading } = trpc.report.getByBrandPositioning.useQuery(
     { brandPositioningId: id! },
@@ -618,6 +620,10 @@ export default function ReportView() {
     }, 100);
   };
 
+  const handleShare = () => {
+    setShareModalOpen(true);
+  };
+
   const sections = [
     { title: "ブランドアイデンティティ", content: report.brandIdentity, type: "brandIdentity" },
     { title: "ブランドアーキタイプ", content: report.brandArchetype, type: "brandArchetype" },
@@ -650,7 +656,7 @@ export default function ReportView() {
             
             <div className="flex gap-2">
               <LanguageSwitcher />
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={handleShare}>
                 <Share2 className="mr-2 h-4 w-4" />
                 共有
               </Button>
@@ -683,6 +689,13 @@ export default function ReportView() {
           ))}
         </div>
       </div>
+      
+      {/* Share Modal */}
+      <ShareModal 
+        open={shareModalOpen} 
+        onOpenChange={setShareModalOpen}
+        brandPositioningId={id!}
+      />
     </div>
   );
 }

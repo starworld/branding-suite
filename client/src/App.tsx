@@ -8,6 +8,7 @@ import Landing from "./pages/Landing";
 import Dashboard from "./pages/Dashboard";
 import CreateBrandPositioning from "./pages/CreateBrandPositioning";
 import ReportView from "./pages/ReportView";
+import SharedReportView from "./pages/SharedReportView";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -18,6 +19,7 @@ function Router() {
       <Route path={"/create"} component={CreateBrandPositioning} />
       <Route path={"/create/:id"} component={CreateBrandPositioning} />
       <Route path={"/report/:id"} component={ReportView} />
+      <Route path={"/shared-report/:id"} component={SharedReportView} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

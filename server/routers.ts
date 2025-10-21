@@ -147,6 +147,13 @@ export const appRouter = router({
       .query(async ({ input }) => {
         return await db.getReportByBrandPositioningId(input.brandPositioningId);
       }),
+
+    // Public endpoint for shared reports (no authentication required)
+    getPublic: publicProcedure
+      .input(z.object({ brandPositioningId: z.string() }))
+      .query(async ({ input }) => {
+        return await db.getReportByBrandPositioningId(input.brandPositioningId);
+      }),
   }),
 });
 
