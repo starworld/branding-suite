@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import CreateBrandPositioning from "./pages/CreateBrandPositioning";
+import ReportView from "./pages/ReportView";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -16,6 +17,7 @@ function Router() {
       <Route path={"/dashboard"} component={Dashboard} />
       <Route path={"/create"} component={CreateBrandPositioning} />
       <Route path={"/create/:id"} component={CreateBrandPositioning} />
+      <Route path={"/report/:id"} component={ReportView} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
