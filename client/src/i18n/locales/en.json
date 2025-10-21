@@ -1,0 +1,207 @@
+{
+  "common": {
+    "appName": "Branding Suite",
+    "login": "Login",
+    "logout": "Logout",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "pricing": "Pricing",
+    "support": "Support"
+  },
+  "home": {
+    "hero": {
+      "title": "AI-Powered Brand Strategy Generation",
+      "subtitle": "Generate comprehensive brand positioning and marketing strategy in 8 simple steps. Multi-language support for businesses worldwide.",
+      "cta": "Get Started Free",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Key Features",
+      "brandPositioning": {
+        "title": "Brand Positioning",
+        "description": "AI analyzes your company's uniqueness and suggests optimal brand positioning"
+      },
+      "competitorAnalysis": {
+        "title": "Competitor Analysis",
+        "description": "Automatically generate SWOT analysis, competitor comparison, and market trends"
+      },
+      "multilingual": {
+        "title": "Multilingual Support",
+        "description": "Support for 7 languages including Japanese and English. Expand globally with ease"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Brand Positioning",
+    "subtitle": "All your brand positionings. You have {{credits}} credits available to create new brand positioning.",
+    "creditsAvailable": "{{count}} credits available",
+    "createNew": "Create New Brand Positioning",
+    "getBranding": "Get Brand Positioning",
+    "listTitle": "Brand Positioning List",
+    "listCount": "Showing {{count}} brand positionings",
+    "empty": "No brand positionings yet",
+    "createFirst": "Create your first brand positioning",
+    "table": {
+      "name": "Name",
+      "description": "Description",
+      "status": "Status",
+      "createdAt": "Created At",
+      "actions": "Actions"
+    },
+    "status": {
+      "completed": "Completed",
+      "inProgress": "{{current}}/8 Steps"
+    },
+    "actions": {
+      "view": "View",
+      "continue": "Continue",
+      "delete": "Delete"
+    }
+  },
+  "wizard": {
+    "title": "Create Brand Positioning",
+    "backToDashboard": "Back to Dashboard",
+    "progress": "Step {{current}} / {{total}}",
+    "progressPercent": "{{percent}}% Complete",
+    "step1": {
+      "title": "Basic Information",
+      "description": "Enter basic information about your brand",
+      "projectName": "Project Name",
+      "projectNamePlaceholder": "e.g., New Product Branding",
+      "brandName": "Brand Name",
+      "brandNamePlaceholder": "e.g., TechCorp",
+      "brandingType": "Branding Type",
+      "types": {
+        "newCompany": {
+          "label": "New Company",
+          "description": "Branding for new companies"
+        },
+        "existingCompany": {
+          "label": "Existing Company",
+          "description": "Rebranding for existing companies"
+        },
+        "personalBrand": {
+          "label": "Personal Brand",
+          "description": "Building personal brand"
+        },
+        "other": {
+          "label": "Other (Custom)",
+          "description": "Other branding types"
+        }
+      }
+    },
+    "step2": {
+      "title": "Inspiration",
+      "description": "Tell us about your brand's inspiration",
+      "label": "Inspiration",
+      "placeholder": "Describe your brand's inspiration sources, reference companies or brands, and desired direction..."
+    },
+    "step3": {
+      "title": "Ideal Customer Profile (ICP)",
+      "description": "Describe your target customer in detail",
+      "label": "Ideal Customer Profile",
+      "placeholder": "Describe target customer details (age, gender, occupation, interests, pain points, buying behavior, etc.)..."
+    },
+    "step4": {
+      "title": "Competitor Analysis",
+      "description": "Enter your main competitors",
+      "label": "Competitors",
+      "placeholder": "List main competitors and their characteristics (one per line)..."
+    },
+    "step5": {
+      "title": "Brand Values",
+      "description": "Define your brand's core values",
+      "label": "Brand Values",
+      "placeholder": "Describe your brand's core values, what you care about, and what you promise..."
+    },
+    "step6": {
+      "title": "Brand Archetype",
+      "description": "Select the archetype that best represents your brand",
+      "archetypes": {
+        "innocent": {
+          "label": "The Innocent",
+          "description": "Pure and optimistic, values honesty"
+        },
+        "sage": {
+          "label": "The Sage",
+          "description": "Pursues wisdom and knowledge, values truth"
+        },
+        "explorer": {
+          "label": "The Explorer",
+          "description": "Loves adventure and discovery, values freedom"
+        },
+        "outlaw": {
+          "label": "The Outlaw",
+          "description": "Revolutionary and disruptive, values change"
+        },
+        "magician": {
+          "label": "The Magician",
+          "description": "Transformation and realization, makes dreams reality"
+        },
+        "hero": {
+          "label": "The Hero",
+          "description": "Courage and determination, overcomes challenges"
+        },
+        "lover": {
+          "label": "The Lover",
+          "description": "Passion and intimacy, values beauty"
+        },
+        "jester": {
+          "label": "The Jester",
+          "description": "Fun and humor, provides joy"
+        },
+        "everyman": {
+          "label": "The Everyman",
+          "description": "Approachable and honest, sense of belonging"
+        },
+        "caregiver": {
+          "label": "The Caregiver",
+          "description": "Compassion and protection, serves others"
+        },
+        "ruler": {
+          "label": "The Ruler",
+          "description": "Control and order, leadership"
+        },
+        "creator": {
+          "label": "The Creator",
+          "description": "Creativity and innovation, creates value"
+        }
+      }
+    },
+    "step7": {
+      "title": "Generating Report",
+      "description": "AI is generating your brand strategy",
+      "generating": "AI is generating your brand strategy...",
+      "wait": "This may take a few minutes. Please wait."
+    },
+    "step8": {
+      "title": "Complete",
+      "description": "Your brand positioning is complete",
+      "success": "Brand positioning complete!",
+      "message": "View your report and leverage your brand strategy.",
+      "viewReport": "View Report"
+    },
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "generate": "Start Generation"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 {{appName}}. All rights reserved."
+  }
+}
+
