@@ -1,0 +1,15 @@
+{
+  "query": "SELECT id, selectedArchetype, brandValuesData FROM brandPositionings WHERE id = 'bp_1761034791614_xwrgf9qvr';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user DpbWMQWptp7eYRG.062dc370b4f5 --database cQsVDRMmGz8jcwefBmSZmh --execute SELECT id, selectedArchetype, brandValuesData FROM brandPositionings WHERE id = 'bp_1761034791614_xwrgf9qvr';",
+  "rows": [
+    {
+      "id": "bp_1761034791614_xwrgf9qvr",
+      "selectedArchetype": "magician",
+      "brandValuesData": "イノベーション、持続可能性、顧客第一主義、品質へのこだわり、透明性"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tselectedArchetype\tbrandValuesData\nbp_1761034791614_xwrgf9qvr\tmagician\tイノベーション、持続可能性、顧客第一主義、品質へのこだわり、透明性\n",
+  "stderr": "",
+  "execution_time_ms": 1578
+}

@@ -1,0 +1,9 @@
+{
+  "query": "SELECT * FROM aiGenerations WHERE brandPositioningId = 'bp_1761034791614_xwrgf9qvr' ORDER BY createdAt DESC LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user DpbWMQWptp7eYRG.062dc370b4f5 --database cQsVDRMmGz8jcwefBmSZmh --execute SELECT * FROM aiGenerations WHERE brandPositioningId = 'bp_1761034791614_xwrgf9qvr' ORDER BY createdAt DESC LIMIT 10;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1916
+}

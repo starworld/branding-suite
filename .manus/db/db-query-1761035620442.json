@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as count FROM aiGenerations WHERE brandPositioningId = 'bp_1761034791614_xwrgf9qvr';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user DpbWMQWptp7eYRG.062dc370b4f5 --database cQsVDRMmGz8jcwefBmSZmh --execute SELECT COUNT(*) as count FROM aiGenerations WHERE brandPositioningId = 'bp_1761034791614_xwrgf9qvr';",
+  "rows": [
+    {
+      "count": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "count\n0\n",
+  "stderr": "",
+  "execution_time_ms": 1598
+}

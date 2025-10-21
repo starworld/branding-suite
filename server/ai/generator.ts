@@ -316,28 +316,33 @@ export async function generateCampaignIdeas(context: GenerationContext) {
 export async function generateCompleteReport(context: GenerationContext) {
   console.log("Starting complete report generation for:", context.brandName);
 
-  // Generate all sections in parallel for faster execution
-  const [
-    brandIdentity,
-    brandArchetype,
-    visualIdentity,
-    swotAnalysis,
-    competitorAnalysis,
-    idealCustomerProfile,
-    marketingCopy,
-    contentStrategy,
-    campaignIdeas,
-  ] = await Promise.all([
-    generateBrandIdentity(context),
-    generateBrandArchetype(context),
-    generateVisualIdentity(context),
-    generateSWOTAnalysis(context),
-    generateCompetitorAnalysis(context),
-    generateIdealCustomerProfile(context),
-    generateMarketingCopy(context),
-    generateContentStrategy(context),
-    generateCampaignIdeas(context),
-  ]);
+  // Generate all sections sequentially for better error handling
+  console.log("[Generator] Step 1/9: Generating Brand Identity...");
+  const brandIdentity = await generateBrandIdentity(context);
+  
+  console.log("[Generator] Step 2/9: Generating Brand Archetype...");
+  const brandArchetype = await generateBrandArchetype(context);
+  
+  console.log("[Generator] Step 3/9: Generating Visual Identity...");
+  const visualIdentity = await generateVisualIdentity(context);
+  
+  console.log("[Generator] Step 4/9: Generating SWOT Analysis...");
+  const swotAnalysis = await generateSWOTAnalysis(context);
+  
+  console.log("[Generator] Step 5/9: Generating Competitor Analysis...");
+  const competitorAnalysis = await generateCompetitorAnalysis(context);
+  
+  console.log("[Generator] Step 6/9: Generating Ideal Customer Profile...");
+  const idealCustomerProfile = await generateIdealCustomerProfile(context);
+  
+  console.log("[Generator] Step 7/9: Generating Marketing Copy...");
+  const marketingCopy = await generateMarketingCopy(context);
+  
+  console.log("[Generator] Step 8/9: Generating Content Strategy...");
+  const contentStrategy = await generateContentStrategy(context);
+  
+  console.log("[Generator] Step 9/9: Generating Campaign Ideas...");
+  const campaignIdeas = await generateCampaignIdeas(context);
 
   // Create generated report
   const report = await db.createGeneratedReport({

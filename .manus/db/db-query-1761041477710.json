@@ -1,0 +1,15 @@
+{
+  "query": "SELECT id, brandPositioningId, createdAt FROM generatedReports WHERE brandPositioningId = 'bp_1761034791614_xwrgf9qvr';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user DpbWMQWptp7eYRG.062dc370b4f5 --database cQsVDRMmGz8jcwefBmSZmh --execute SELECT id, brandPositioningId, createdAt FROM generatedReports WHERE brandPositioningId = 'bp_1761034791614_xwrgf9qvr';",
+  "rows": [
+    {
+      "id": "rep_1761041343138_fyvarsmv6",
+      "brandPositioningId": "bp_1761034791614_xwrgf9qvr",
+      "createdAt": "2025-10-21 10:09:03"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tbrandPositioningId\tcreatedAt\nrep_1761041343138_fyvarsmv6\tbp_1761034791614_xwrgf9qvr\t2025-10-21 10:09:03\n",
+  "stderr": "",
+  "execution_time_ms": 1554
+}

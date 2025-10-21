@@ -11,7 +11,10 @@ export default function ReportView() {
   const [, setLocation] = useLocation();
   const { user } = useAuth();
 
-  const { data: report, isLoading } = trpc.report.get.useQuery({ id: id! }, { enabled: !!id });
+  const { data: report, isLoading } = trpc.report.getByBrandPositioning.useQuery(
+    { brandPositioningId: id! },
+    { enabled: !!id }
+  );
 
   if (isLoading) {
     return (

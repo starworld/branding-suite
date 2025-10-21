@@ -111,8 +111,27 @@ export const appRouter = router({
           language: bp.language ?? "ja",
         };
 
-        const report = await aiGenerator.generateCompleteReport(context);
-        return { reportId: report.id };
+        // Update status to in_progress immediately
+        await db.updateBrandPositioning(input.id, {
+          status: "in_progress",
+          currentStep: 7,
+        });
+
+        // Start generation in background (don't await)
+        console.log("[Generate] Starting background generation for:", input.id);
+        aiGenerator.generateCompleteReport(context).then(() => {
+          console.log("[Generate] Background generation completed for:", input.id);
+        }).catch((error) => {
+          console.error("[Generate] Background generation failed:", error);
+          // Update status to draft on error
+          db.updateBrandPositioning(input.id, {
+            status: "draft",
+            currentStep: 6,
+          });
+        });
+
+        // Return immediately
+        return { success: true, message: "Generation started" };
       }),
   }),
 
