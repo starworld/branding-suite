@@ -22,7 +22,21 @@ export const appRouter = router({
 
   subscription: router({
     get: protectedProcedure.query(async ({ ctx }) => {
-      return await db.getUserSubscription(ctx.user.id);
+      const subscription = await db.getUserSubscription(ctx.user.id);
+      // Return default subscription if none exists
+      if (!subscription) {
+        return {
+          id: '',
+          userId: ctx.user.id,
+          planType: 'free' as const,
+          creditsRemaining: 0,
+          creditsTotal: 0,
+          status: 'active' as const,
+          createdAt: new Date(),
+          expiresAt: null,
+        };
+      }
+      return subscription;
     }),
   }),
 
