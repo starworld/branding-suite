@@ -6,6 +6,7 @@ import { ArrowLeft, Download, Share2 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useParams } from "wouter";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useState } from "react";
 
 // Helper function to render JSON content in a readable format
 function renderContent(content: string | null, sectionType: string) {
@@ -575,6 +576,7 @@ export default function ReportView() {
   const { id } = useParams();
   const [, setLocation] = useLocation();
   const { user } = useAuth();
+  const [isExporting, setIsExporting] = useState(false);
 
   const { data: report, isLoading } = trpc.report.getByBrandPositioning.useQuery(
     { brandPositioningId: id! },
@@ -606,6 +608,15 @@ export default function ReportView() {
       </div>
     );
   }
+
+  const handleExportPDF = () => {
+    setIsExporting(true);
+    // Use browser's native print dialog for PDF export
+    setTimeout(() => {
+      window.print();
+      setIsExporting(false);
+    }, 100);
+  };
 
   const sections = [
     { title: "ブランドアイデンティティ", content: report.brandIdentity, type: "brandIdentity" },
@@ -643,9 +654,14 @@ export default function ReportView() {
                 <Share2 className="mr-2 h-4 w-4" />
                 共有
               </Button>
-              <Button variant="outline" size="sm">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={handleExportPDF}
+                disabled={isExporting}
+              >
                 <Download className="mr-2 h-4 w-4" />
-                PDF出力
+                {isExporting ? 'PDF生成中...' : 'PDF出力'}
               </Button>
             </div>
           </div>
